@@ -1,0 +1,76 @@
+:root {
+  --black: #111;
+  --beige: #DCC1AB;
+  --green: #1B5B31;
+  --grey: #F5F0EC;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #FFF;
+  color: var(--black, #111);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.carousel,
+.carousel-mini {
+  display: grid;
+  grid-template-columns: repeat(12, 100vw);
+  overflow: scroll;
+  height: auto;
+  scroll-snap-type: both mandatory;
+}
+
+/* .active {
+  scroll-snap-type: unset;
+} */
+
+
+.carousel_item {
+  scroll-snap-align: center;
+}
+
+#carousel_item_1 {
+  background: var(--beige, #DCC1AB);
+  align-items: center;
+  gap: 4rem;
+}
+
+#carousel_item_2 {
+  background: var(--green, #1B5B31);
+  align-items: center;
+  gap: 4rem;
+}
+
+#gallery>div>img {
+  cursor: pointer;
+}
+
+.fill-black-white {
+  background-image: linear-gradient(to left,
+      transparent,
+      transparent 50%,
+      #000000 50%,
+      #000000);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .5s ease-in-out;
+}
+
+.fill-black-white:hover {
+  background-position: 0 0;
+  color: #FDFDFD;
+}
